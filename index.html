@@ -176,6 +176,36 @@
   </div>
 
   <script>
+  
+    // Todo o JavaScript dentro deste event listener
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Inicializa Supabase
+      const supabaseUrl = 'https://ogcpmzljtgemrdmrwwit.supabase.co';
+      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9nY3BtemxqdGdlbXJkbXJ3d2l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3ODM0MjYsImV4cCI6MjA2NTM1OTQyNn0.PSQCZ6Uxgw_CsP5FUwFMfN2rLc4e4_3SEuk7rzVfbLk';
+      const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
+      // Resto do seu código...
+      const emailInput = document.getElementById('email');
+      const passInput = document.getElementById('password');
+      const btnLogin = document.getElementById('btn-login');
+      const btnSignup = document.getElementById('btn-signup');
+      const btnLogout = document.getElementById('btn-logout');
+      const msg = document.getElementById('msg');
+      const loginArea = document.getElementById('login-area');
+      const vipArea = document.getElementById('vip-area');
+      const userEmail = document.getElementById('user-email');
+
+      // Suas funções...
+      function showVipArea(email) {
+        loginArea.style.display = 'none';
+        vipArea.style.display = 'block';
+        userEmail.innerText = email;
+        msg.innerText = '';
+      }
+
+      // ... continue com o resto do seu código
+    });
+ 
 // Atualize a inicialização do Supabase para a versão mais recente
 const supabaseUrl = 'https://ogcpmzljtgemrdmrwwit.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9nY3BtemxqdGdlbXJkbXJ3d2l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3ODM0MjYsImV4cCI6MjA2NTM1OTQyNn0.PSQCZ6Uxgw_CsP5FUwFMfN2rLc4e4_3SEuk7rzVfbLk';
